@@ -1,0 +1,26 @@
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav-brand {
+    font-family: 'Righteous', Arial;
+}
+
+.nav-brand:hover {
+    text-decoration: none;
+}
+
+.brand {
+    font-size: 48px;
+    color: #4A4A4A;
+}
+
+.navbar .highlight {
+    color: #B5444F;
+}
+
+.navbar-right {
+  margin-top: 10px;
+  margin-right: 10px;
+}
