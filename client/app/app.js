@@ -7,7 +7,8 @@ angular.module('app', [
   'ngRoute',
   'pascalprecht.translate',
   'btford.socket-io',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'angularFileUpload'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider

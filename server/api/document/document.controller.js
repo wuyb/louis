@@ -20,8 +20,14 @@ exports.show = function(req, res) {
   });
 };
 
-// Creates a new document in the DB.
+// Creates a new document in the DB and store the file into storage.
 exports.create = function(req, res) {
+  if (req.files.file) {
+    var file = req.files.file;
+    console.log(file.name);
+    console.log(file.type);
+  }
+
   Document.create(req.body, function(err, document) {
     if(err) { return handleError(res, err); }
     return res.json(201, document);
