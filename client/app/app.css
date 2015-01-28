@@ -40,16 +40,16 @@
 }
 
 body {
-    font-family: 'Lato', Arial, sans-serif;
+    font-family: 'Avenir Next',Avenir,'Helvetica Neue',Helvetica,'Lantinghei SC','Hiragino Sans GB','Microsoft YaHei',"微软雅黑",STHeiti,'WenQuanYi Micro Hei',SimSun,sans-serif;
     background: #FFF;
     color: #4A4A4A;
 }
 
 a {
-    color: #B5444F;
+    color: #838A2D;
 }
 
 a:hover {
-    color: #B5444F;
+    color: #BEC23F;
     text-decoration: none;
 }
