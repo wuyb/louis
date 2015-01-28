@@ -2,10 +2,19 @@
 
 angular.module('app')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [/*{
-      'title': 'Home',
-      'link': '/'
-    }*/];
+    $scope.menu = [{
+      'title': 'Dashboard',
+      'link': '/dashboard',
+      'login': true
+    }, {
+      'title': 'Documents',
+      'link': '/document',
+      'login': true
+    }, {
+      'title': 'Community',
+      'link': '/community',
+      'login': true
+    }];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

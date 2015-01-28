@@ -4,23 +4,37 @@
 }
 
 .nav-brand {
-    font-family: 'Righteous', Arial;
+  font-family: 'Righteous', Arial;
 }
 
 .nav-brand:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .brand {
-    font-size: 48px;
-    color: #4A4A4A;
+  font-size: 48px;
+  color: #4A4A4A;
 }
 
 .navbar .highlight {
-    color: #90B44B;
+  color: #90B44B;
 }
 
 .navbar-right {
   margin-top: 10px;
   margin-right: 10px;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background: none;
+  color: #90B44B;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+  background: none;
+  color: #90B44B;
+}
+
+.navbar-default {
+  border: none;
 }
