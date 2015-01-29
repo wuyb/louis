@@ -57,6 +57,12 @@ var all = {
     clientID:     process.env.GOOGLE_ID || 'id',
     clientSecret: process.env.GOOGLE_SECRET || 'secret',
     callbackURL:  (process.env.DOMAIN || '') + '/auth/google/callback'
+  },
+
+  storage: {
+    fs: {
+      root: process.env.STORAGE_LOCAL_ROOT || 'storage'
+    }
   }
 };
 

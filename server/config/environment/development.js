@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 // Development specific configuration
 // ==================================
 module.exports = {
@@ -8,5 +10,12 @@ module.exports = {
     uri: 'mongodb://localhost/test-dev'
   },
 
-  seedDB: true
+  seedDB: true,
+
+  storage: {
+    fs: {
+      root: path.normalize(__dirname + '/../../../storage')
+    }
+  }
+
 };

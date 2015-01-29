@@ -2,6 +2,9 @@
 
 var _ = require('lodash');
 var Document = require('./document.model');
+var fs = require('fs');
+var config = require('../../config/environment');
+var path = require('path');
 
 // Get list of documents
 exports.index = function(req, res) {
@@ -24,14 +27,19 @@ exports.show = function(req, res) {
 exports.create = function(req, res) {
   if (req.files.file) {
     var file = req.files.file;
-    console.log(file.name);
-    console.log(file.type);
+    var storagePath = path.join(config.storage.fs.root, file.name);
+    console.log(storagePath);
+    fs.rename(file.path, storagePath, function(err) {
+      if (err) {
+        return res.send(500);
+      }
+      Document.create({name:file.name}, function(err, document) {
+        if(err) { return handleError(res, err); }
+        return res.json(201, document);
+      });
+    })
   }
 
-  Document.create(req.body, function(err, document) {
-    if(err) { return handleError(res, err); }
-    return res.json(201, document);
-  });
 };
 
 // Updates an existing document in the DB.

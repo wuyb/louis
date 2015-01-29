@@ -1,7 +1,16 @@
 div(ng-include='"components/navbar/navbar.html"')
 
 div.container
-  p This is the document view, and it is under construction.
-  button(ng-file-select="", ng-model="files", ng-multiple="true") Upload
+  div.row
+    div.col-lg-2
+      button(ng-file-select="", ng-model="files", ng-multiple="false") Select File
+    div.col-lg-2(ng-show='files !== undefined')
+      label {{files[0].name}}
+    div.col-lg-8(ng-show='files !== undefined')
+      progressbar(value="progress", max="100", type="success")
+  div.row.document-list
+    div.col-lg-12
+      li(ng-repeat='document in documents')
+        {{document.name}}
 
 div(ng-include='"components/footer/footer.html"')
